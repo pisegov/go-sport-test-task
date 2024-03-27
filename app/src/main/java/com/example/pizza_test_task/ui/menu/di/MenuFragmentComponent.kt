@@ -2,6 +2,7 @@ package com.example.pizza_test_task.ui.menu.di
 
 import androidx.fragment.app.Fragment
 import com.example.pizza_test_task.di.ApplicationComponent
+import com.example.pizza_test_task.ui.menu.menu_list.MenuEpoxyController
 import com.example.pizza_test_task.ui.menu.MenuViewModel
 import com.example.pizza_test_task.ui.menu.banners.BannersEpoxyController
 import com.example.pizza_test_task.ui.menu.categories.CategoriesEpoxyController
@@ -26,6 +27,7 @@ interface MenuFragmentComponent {
     val viewModel: MenuViewModel
     val categoriesEpoxyController: CategoriesEpoxyController
     val bannersEpoxyController: BannersEpoxyController
+    val menuEpoxyController: MenuEpoxyController
 }
 
 @Module
