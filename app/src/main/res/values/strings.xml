@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">pizza-test-task</string>
+    <string name="action_menu">Меню</string>
+    <string name="action_profile">Профиль</string>
+    <string name="action_cart">Корзина</string>
+</resources>

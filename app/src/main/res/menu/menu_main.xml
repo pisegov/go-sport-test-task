@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.pizza_test_task.ui.MainActivity">
+    <item
+        android:id="@+id/MenuFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav_menu"
+        android:title="@string/action_menu" />
+
+    <item
+        android:id="@+id/ProfileFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav_profile"
+        android:title="@string/action_profile" />
+
+    <item
+        android:id="@+id/CartFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav_cart"
+        android:title="@string/action_cart" />
+</menu>
