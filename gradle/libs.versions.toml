@@ -13,7 +13,9 @@ constraintlayout = "2.1.4"
 viewbinding = "8.3.1"
 navigationFragmentKtx = "2.7.7"
 navigationUiKtx = "2.7.7"
+epoxy = "5.1.4"
 dagger = "2.51"
+ksp = "1.9.23-1.0.19"
 
 
 [libraries]
@@ -28,7 +30,10 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 androidx-viewbinding = { group = "androidx.databinding", name = "viewbinding", version.ref = "viewbinding" }
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
-androidx-coordinatorlayout = {group = "androidx.coordinatorlayout", name = "coordinatorlayout", version.ref = "coordinatorlayout"}
+androidx-coordinatorlayout = { group = "androidx.coordinatorlayout", name = "coordinatorlayout", version.ref = "coordinatorlayout" }
+
+airbnb-epoxy = { group = "com.airbnb.android", name = "epoxy", version.ref = "epoxy" }
+airbnb-epoxy-processor = { group = "com.airbnb.android", name = "epoxy-processor", version.ref = "epoxy" }
 
 dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
@@ -37,3 +42,4 @@ dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = 
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+ksp = {id = "com.google.devtools.ksp", version.ref = "ksp"}

@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.kapt)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -47,6 +48,8 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.coordinatorlayout)
+    implementation(libs.airbnb.epoxy)
+    kapt(libs.airbnb.epoxy.processor)
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
     testImplementation(libs.junit)
