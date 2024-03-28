@@ -1,0 +1,28 @@
+#+title: Тестовое задание для Go-sport
+
+#+html: <a href>
+#+html:   <img src="assets/screencast.gif" width="180"/>
+#+html: </a>
+#+html: <a href>
+#+html:   <img src="assets/screenshot-1.png" width="180"/>
+#+html:   <img src="assets/screenshot-2.png" width="180"/>
+#+html:   <img src="assets/screenshot-3.png" width="180"/>
+#+html: </a>
+
+* Запуск
+Для запуска нужно поместить в ~local.properties~ ссылку на api
+#+begin_src
+BASE_URL="https://www.themealdb.com/api/json/v1/1/"
+#+end_src
+
+* Технологии
+- Kotlin
+- MVVM
+- Coroutines
+- Flow
+- Room
+- Retrofit + Kotlinx Serialization
+- Dagger 2
+- Epoxy RecyclerView
+- View Binding
+- Coil
