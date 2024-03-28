@@ -1,7 +1,7 @@
 package com.example.pizza_test_task.data.remote
 
 import com.example.pizza_test_task.BuildConfig
-import com.example.pizza_test_task.data.categories.CategoriesApi
+import com.example.pizza_test_task.data.categories.remote.CategoriesApi
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType

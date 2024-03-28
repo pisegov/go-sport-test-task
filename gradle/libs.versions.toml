@@ -13,6 +13,7 @@ constraintlayout = "2.1.4"
 viewbinding = "8.3.1"
 navigationFragmentKtx = "2.7.7"
 navigationUiKtx = "2.7.7"
+room = "2.6.1"
 epoxy = "5.1.4"
 dagger = "2.51"
 ksp = "1.9.23-1.0.19"
@@ -43,7 +44,14 @@ dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = 
 
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 kotlinx-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
-kotlinx-serialization-converter = { group = "com.squareup.retrofit2", name = "converter-kotlinx-serialization", version.ref = "retrofit"}
+kotlinx-serialization-converter = { group = "com.squareup.retrofit2", name = "converter-kotlinx-serialization", version.ref = "retrofit" }
+
+androidx-room = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+
+[bundles]
+room = ["androidx-room", "androidx-room-ktx"]
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

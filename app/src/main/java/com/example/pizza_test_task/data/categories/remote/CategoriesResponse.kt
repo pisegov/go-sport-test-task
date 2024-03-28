@@ -1,4 +1,4 @@
-package com.example.pizza_test_task.data.categories.model
+package com.example.pizza_test_task.data.categories.remote
 
 import kotlinx.serialization.Serializable
 

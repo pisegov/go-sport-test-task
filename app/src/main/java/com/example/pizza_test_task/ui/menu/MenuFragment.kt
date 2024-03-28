@@ -14,7 +14,6 @@ import com.example.pizza_test_task.data.SampleDataStore
 import com.example.pizza_test_task.databinding.FragmentMenuBinding
 import com.example.pizza_test_task.ui.menu.banners.BannersEpoxyController
 import com.example.pizza_test_task.ui.menu.categories.CategoriesEpoxyController
-import com.example.pizza_test_task.ui.menu.categories.CategoryPresentationModel
 import com.example.pizza_test_task.ui.menu.di.DaggerMenuFragmentComponent
 import com.example.pizza_test_task.ui.menu.di.MenuFragmentComponent
 import com.example.pizza_test_task.ui.menu.menu_list.MenuEpoxyController
@@ -58,9 +57,7 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
     }
 
     private fun setupViews() {
-        categoriesController = component.categoriesEpoxyController.apply {
-            items = SampleDataStore.categories
-        }
+        categoriesController = component.categoriesEpoxyController
         binding.categories.setController(categoriesController)
         // binding.categories.addItemDecoration(EpoxyItemSpacingDecorator(8.dpToPx()))
 

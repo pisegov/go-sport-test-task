@@ -1,6 +1,5 @@
-package com.example.pizza_test_task.data.categories
+package com.example.pizza_test_task.data.categories.remote
 
-import com.example.pizza_test_task.data.categories.model.CategoriesResponse
 import retrofit2.http.GET
 
 interface CategoriesApi {

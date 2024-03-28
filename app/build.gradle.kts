@@ -56,13 +56,20 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.coordinatorlayout)
+
+    implementation(libs.bundles.room)
+    ksp(libs.androidx.room.compiler)
+
     implementation(libs.airbnb.epoxy)
     kapt(libs.airbnb.epoxy.processor)
+
     implementation(libs.retrofit)
     implementation(libs.kotlinx.serialization)
     implementation(libs.kotlinx.serialization.converter)
+
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
