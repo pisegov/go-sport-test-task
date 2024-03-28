@@ -1,8 +1,11 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.kapt)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.kotlinx.serialization)
 }
 
 android {
@@ -16,6 +19,10 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+        val properties: Properties = Properties()
+        properties.load(rootProject.file("local.properties").inputStream())
+
+        buildConfigField("String", "BASE_URL", properties.getProperty("BASE_URL"))
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -35,6 +42,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -50,6 +58,9 @@ dependencies {
     implementation(libs.androidx.coordinatorlayout)
     implementation(libs.airbnb.epoxy)
     kapt(libs.airbnb.epoxy.processor)
+    implementation(libs.retrofit)
+    implementation(libs.kotlinx.serialization)
+    implementation(libs.kotlinx.serialization.converter)
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
     testImplementation(libs.junit)

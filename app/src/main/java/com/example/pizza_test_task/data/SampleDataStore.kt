@@ -1,17 +1,17 @@
 package com.example.pizza_test_task.data
 
 import com.example.pizza_test_task.ui.menu.banners.Banner
-import com.example.pizza_test_task.ui.menu.categories.Category
+import com.example.pizza_test_task.ui.menu.categories.CategoryPresentationModel
 import com.example.pizza_test_task.ui.menu.menu_list.MenuItem
 
 object SampleDataStore {
     val categories = listOf(
-        Category("Пицца", true),
-        Category("Комбо", false),
-        Category("Десерты", false),
-        Category("Напитки", false),
-        Category("Что-то ", false),
-        Category("Еще что-то", false),
+        CategoryPresentationModel("Пицца", true),
+        CategoryPresentationModel("Комбо", false),
+        CategoryPresentationModel("Десерты", false),
+        CategoryPresentationModel("Напитки", false),
+        CategoryPresentationModel("Что-то ", false),
+        CategoryPresentationModel("Еще что-то", false),
     )
 
     val banners = listOf(

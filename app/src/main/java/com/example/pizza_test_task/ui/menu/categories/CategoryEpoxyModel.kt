@@ -7,7 +7,7 @@ import com.example.pizza_test_task.util.dpToPx
 
 data class CategoryEpoxyModel(
     val id: String,
-    val model: Category,
+    val model: CategoryPresentationModel,
 ) : ViewBindingKotlinModel<ItemCategoryBinding>(R.layout.item_category) {
 
     init {

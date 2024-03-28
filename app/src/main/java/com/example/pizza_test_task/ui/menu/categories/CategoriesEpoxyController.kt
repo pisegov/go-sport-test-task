@@ -5,7 +5,7 @@ import com.example.pizza_test_task.ui.menu.MenuViewModel
 import javax.inject.Inject
 
 class CategoriesEpoxyController @Inject constructor(viewModel: MenuViewModel): EpoxyController() {
-    var items : List<Category> = listOf()
+    var items : List<CategoryPresentationModel> = listOf()
         set(value) {
             field = value
             requestModelBuild()
