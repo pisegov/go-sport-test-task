@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.lifecycle.ViewModelProvider
 import com.example.pizza_test_task.data.AppRoomDatabase
 import com.example.pizza_test_task.data.categories.local.CategoriesDao
+import com.example.pizza_test_task.data.menu_items.local.MenuItemsDao
 import dagger.BindsInstance
 import dagger.Component
 import dagger.Module
@@ -34,6 +35,11 @@ interface ApplicationModule {
         @Provides
         fun provideCategoriesDao(db: AppRoomDatabase): CategoriesDao {
             return db.getCategoriesDao()
+        }
+
+        @Provides
+        fun provideMenuItemsDao(db: AppRoomDatabase): MenuItemsDao {
+            return db.getMenuItemsDao()
         }
     }
 }

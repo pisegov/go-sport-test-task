@@ -1,7 +1,7 @@
 package com.example.pizza_test_task.data
 
 import com.example.pizza_test_task.ui.menu.banners.Banner
-import com.example.pizza_test_task.ui.menu.menu_list.MenuItem
+import com.example.pizza_test_task.ui.menu.menu_list.MenuItemPresentationModel
 
 object SampleDataStore {
     val banners = listOf(
@@ -12,9 +12,9 @@ object SampleDataStore {
     )
 
     val menuItems = listOf(
-        MenuItem(title = "Ветчина и грибы", description = "Ветчина,шампиньоны, увеличинная порция моцареллы, томатный соус", buttonText = "от 345 р"),
-        MenuItem(title = "Ветчина и грибы", description = "Ветчина,шампиньоны, увеличинная порция моцареллы, томатный соус", buttonText = "от 345 р"),
-        MenuItem(title = "Ветчина и грибы", description = "Ветчина,шампиньоны, увеличинная порция моцареллы, томатный соус", buttonText = "от 345 р"),
-        MenuItem(title = "Ветчина и грибы", description = "Ветчина,шампиньоны, увеличинная порция моцареллы, томатный соус", buttonText = "от 345 р"),
+        MenuItemPresentationModel(title = "Ветчина и грибы", description = "Ветчина,шампиньоны, увеличинная порция моцареллы, томатный соус", buttonText = "от 345 р"),
+        MenuItemPresentationModel(title = "Ветчина и грибы", description = "Ветчина,шампиньоны, увеличинная порция моцареллы, томатный соус", buttonText = "от 345 р"),
+        MenuItemPresentationModel(title = "Ветчина и грибы", description = "Ветчина,шампиньоны, увеличинная порция моцареллы, томатный соус", buttonText = "от 345 р"),
+        MenuItemPresentationModel(title = "Ветчина и грибы", description = "Ветчина,шампиньоны, увеличинная порция моцареллы, томатный соус", buttonText = "от 345 р"),
     )
 }

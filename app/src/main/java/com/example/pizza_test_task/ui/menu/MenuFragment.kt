@@ -52,6 +52,7 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
 
             viewModel.state.collect {
                 categoriesController.items = it.categories
+                menuController.items = it.filteredMenu
             }
         }
     }
@@ -67,9 +68,7 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
         binding.banners.setController(bannersController)
         binding.banners.addItemDecoration(EpoxyItemSpacingDecorator(16.dpToPx()))
 
-        menuController = component.menuEpoxyController.apply {
-            items = SampleDataStore.menuItems
-        }
+        menuController = component.menuEpoxyController
         binding.menuItems.setController(menuController)
         val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.menuItems.layoutManager = layoutManager

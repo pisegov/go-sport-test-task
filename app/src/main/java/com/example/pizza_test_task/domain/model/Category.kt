@@ -1,4 +1,4 @@
-package com.example.pizza_test_task.domain.categories
+package com.example.pizza_test_task.domain.model
 
 data class Category(
     val id: Long,

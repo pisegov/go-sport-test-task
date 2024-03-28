@@ -2,6 +2,7 @@ package com.example.pizza_test_task.data.remote
 
 import com.example.pizza_test_task.BuildConfig
 import com.example.pizza_test_task.data.categories.remote.CategoriesApi
+import com.example.pizza_test_task.data.menu_items.remote.MenuItemsApi
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType
@@ -28,4 +29,5 @@ object RetrofitModule {
         .build()
 
     val categoriesApi: CategoriesApi = retrofit.create<CategoriesApi>()
+    val menuItemsApi: MenuItemsApi = retrofit.create<MenuItemsApi>()
 }

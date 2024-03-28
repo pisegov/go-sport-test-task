@@ -1,7 +1,7 @@
 package com.example.pizza_test_task.data.categories.local
 
 import com.example.pizza_test_task.data.categories.remote.CategoryDataModel
-import com.example.pizza_test_task.domain.categories.Category
+import com.example.pizza_test_task.domain.model.Category
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
