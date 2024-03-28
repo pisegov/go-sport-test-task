@@ -11,7 +11,7 @@ import kotlin.reflect.KProperty
 
 class FragmentViewBindingDelegate<T : ViewBinding>(
     val fragment: Fragment,
-    val viewBindingFactory: (View) -> T
+    val viewBindingFactory: (View) -> T,
 ) : ReadOnlyProperty<Fragment, T> {
 
     private var binding: T? = null
@@ -24,7 +24,7 @@ class FragmentViewBindingDelegate<T : ViewBinding>(
                         viewLifecycleOwner.lifecycle.addObserver(object : LifecycleEventObserver {
                             override fun onStateChanged(
                                 source: LifecycleOwner,
-                                event: Lifecycle.Event
+                                event: Lifecycle.Event,
                             ) {
                                 if (event == Lifecycle.Event.ON_DESTROY) {
                                     binding = null

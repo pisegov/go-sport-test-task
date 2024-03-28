@@ -2,10 +2,10 @@ package com.example.pizza_test_task.ui.menu.di
 
 import androidx.fragment.app.Fragment
 import com.example.pizza_test_task.di.ApplicationComponent
-import com.example.pizza_test_task.ui.menu.menu_list.MenuEpoxyController
 import com.example.pizza_test_task.ui.menu.MenuViewModel
 import com.example.pizza_test_task.ui.menu.banners.BannersEpoxyController
 import com.example.pizza_test_task.ui.menu.categories.CategoriesEpoxyController
+import com.example.pizza_test_task.ui.menu.menu_list.MenuEpoxyController
 import dagger.BindsInstance
 import dagger.Component
 import dagger.Module

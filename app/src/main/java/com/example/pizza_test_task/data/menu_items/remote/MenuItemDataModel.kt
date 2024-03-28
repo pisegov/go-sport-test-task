@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class MenuItemDataModel (
+data class MenuItemDataModel(
     @SerialName("idMeal") val id: Long,
     @SerialName("strMeal") val title: String,
     @SerialName("strCategory") val categoryTitle: String,
@@ -13,6 +13,6 @@ data class MenuItemDataModel (
 )
 
 @Serializable
-data class MenuItemsResponce (
-    @SerialName("meals") val list: List<MenuItemDataModel>
+data class MenuItemsResponce(
+    @SerialName("meals") val list: List<MenuItemDataModel>,
 )

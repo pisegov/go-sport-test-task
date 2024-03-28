@@ -5,13 +5,6 @@ import androidx.room.Entity
 @Entity(
     tableName = "MenuItem",
     primaryKeys = ["id"],
-    // foreignKeys = [
-    //     ForeignKey(
-    //         entity = CategoryEntity::class,
-    //         parentColumns = ["title"],
-    //         childColumns = ["categoryTitle"]
-    //     )
-    // ],
 )
 data class MenuItemEntity(
     val id: Long,

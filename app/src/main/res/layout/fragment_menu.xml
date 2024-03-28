@@ -35,10 +35,12 @@
                     android:id="@+id/banners"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="8dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
                     android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
                     tools:listitem="@layout/item_banner" />
 
             </LinearLayout>
@@ -59,10 +61,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginVertical="16dp"
-                        android:layout_weight="2"
                         android:drawableEnd="@drawable/ic_arrow_down"
-                        android:text="Москва"
-                        android:textSize="16dp"
+                        android:text="@string/city"
+                        android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -71,7 +72,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="16dp"
-                        android:layout_weight="1"
                         android:src="@drawable/ic_qr_code"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
@@ -90,9 +90,9 @@
             android:id="@+id/categories"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:clipChildren="false"
             android:clipToPadding="false"
-            android:forceHasOverlappingRendering="true"
             android:paddingHorizontal="12dp"
             tools:listitem="@layout/item_category" />
     </com.google.android.material.appbar.AppBarLayout>

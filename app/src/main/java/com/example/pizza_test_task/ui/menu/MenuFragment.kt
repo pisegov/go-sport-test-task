@@ -48,7 +48,6 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
 
     private fun setupObservers() {
         viewLifecycleOwner.lifecycleScope.launch {
-
             viewModel.state.collect {
                 categoriesController.items = it.categories
                 menuController.items = it.filteredMenu
@@ -60,15 +59,14 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
     private fun setupViews() {
         categoriesController = component.categoriesEpoxyController
         binding.categories.setController(categoriesController)
-        // binding.categories.addItemDecoration(EpoxyItemSpacingDecorator(8.dpToPx()))
 
         bannersController = component.bannersEpoxyController
         binding.banners.setController(bannersController)
         binding.banners.addItemDecoration(EpoxyItemSpacingDecorator(16.dpToPx()))
 
+        val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         menuController = component.menuEpoxyController
         binding.menuItems.setController(menuController)
-        val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.menuItems.layoutManager = layoutManager
     }
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- pressed -->
-    <item android:state_pressed="true" android:drawable="@drawable/category_button_shape" />
+    <item android:drawable="@drawable/category_button_shape" android:state_pressed="true" />
 
     <!-- focused -->
-    <item android:state_focused="true" android:drawable="@drawable/category_button_shape" />
+    <item android:drawable="@drawable/category_button_shape" android:state_focused="true" />
 
     <!-- selected -->
-    <item android:state_selected="true" android:drawable="@drawable/category_button_selected_shape" />
+    <item android:drawable="@drawable/category_button_selected_shape" android:state_selected="true" />
 
     <!-- default -->
     <item android:drawable="@drawable/category_button_shape" />

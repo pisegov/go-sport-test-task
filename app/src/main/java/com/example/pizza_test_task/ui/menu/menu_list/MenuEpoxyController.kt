@@ -11,7 +11,7 @@ class MenuEpoxyController @Inject constructor() : EpoxyController() {
         }
 
     override fun buildModels() {
-        items.forEach {menuItem ->
+        items.forEach { menuItem ->
             MenuItemEpoxyModel(id = "menu_item_${menuItem.id}", model = menuItem).addTo(this)
         }
     }

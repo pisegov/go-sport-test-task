@@ -9,6 +9,6 @@
         android:id="@+id/MenuFragment"
         android:name="com.example.pizza_test_task.ui.menu.MenuFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_menu"/>
+        tools:layout="@layout/fragment_menu" />
 
 </navigation>

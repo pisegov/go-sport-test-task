@@ -20,14 +20,14 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/mainBottomNavigationView"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:background="@color/navigation_bar_surface"
         app:itemIconTint="@color/navigation_bar_item_color"
         app:itemTextColor="@color/navigation_bar_item_color"
-        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nav_host_fragment_content_main"
         app:menu="@menu/menu_main" />

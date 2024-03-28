@@ -21,7 +21,7 @@ import java.util.concurrent.ConcurrentHashMap
  * }
  */
 abstract class ViewBindingKotlinModel<T : ViewBinding>(
-    @LayoutRes private val layoutRes: Int
+    @LayoutRes private val layoutRes: Int,
 ) : EpoxyModel<View>() {
     // Using reflection to get the static binding method.
     // Lazy so it's computed only once by instance, when the 1st ViewHolder is actually created.

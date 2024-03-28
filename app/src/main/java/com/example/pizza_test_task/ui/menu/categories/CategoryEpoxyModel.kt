@@ -20,12 +20,14 @@ data class CategoryEpoxyModel(
         if (model.selected) {
             button.elevation = 0f
             button.setTextAppearance(R.style.Base_TextAppearance_AppCompat_Widget_Button_Selected)
+            button.isClickable = false
         } else {
             button.elevation = 8.dpToPx().toFloat()
             button.setTextAppearance(R.style.Base_TextAppearance_AppCompat_Widget_Button_Normal)
             button.setOnClickListener {
                 onClick(model.id)
             }
+            button.isClickable = true
         }
         button.isSelected = model.selected
     }

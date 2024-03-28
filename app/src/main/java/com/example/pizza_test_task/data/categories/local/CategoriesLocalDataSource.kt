@@ -6,20 +6,22 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 class CategoriesLocalDataSource @Inject constructor(private val dao: CategoriesDao) {
-    val categories = dao.observeCategories().map {list ->
+    val categories = dao.observeCategories().map { list ->
         list.map {
             Category(
-                it.id,
-                it.title,
+                id = it.id,
+                text = it.title,
                 selected = it.selected
             )
         }
     }
 
     fun insertCategories(categoriesFromNetwork: List<CategoryDataModel>) {
+        if (categoriesFromNetwork.isEmpty()) return
+
         val localSelectedId = dao.getSelectedId()
         val selectedId =
-            if (localSelectedId == 0L && categoriesFromNetwork.isNotEmpty()) {
+            if (localSelectedId == 0L) {
                 categoriesFromNetwork.first().id
             } else {
                 localSelectedId

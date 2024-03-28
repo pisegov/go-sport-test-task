@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 class MenuItemsLocalDataSource @Inject constructor(private val dao: MenuItemsDao) {
-    val menuItems = dao.observeFilteredMenu().map {list ->
+    val menuItems = dao.observeFilteredMenu().map { list ->
         list.map {
             MenuItem(
                 id = it.id,
@@ -18,6 +18,8 @@ class MenuItemsLocalDataSource @Inject constructor(private val dao: MenuItemsDao
     }
 
     fun insertMenu(menuItems: List<MenuItemDataModel>) {
+        if (menuItems.isEmpty()) return
+
         val list = menuItems.map {
             MenuItemEntity(
                 id = it.id,

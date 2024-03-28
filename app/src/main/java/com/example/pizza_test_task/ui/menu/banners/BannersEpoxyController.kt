@@ -4,7 +4,7 @@ import com.airbnb.epoxy.EpoxyController
 import com.example.pizza_test_task.domain.model.Banner
 import javax.inject.Inject
 
-class BannersEpoxyController @Inject constructor() : EpoxyController(){
+class BannersEpoxyController @Inject constructor() : EpoxyController() {
 
     var items: List<Banner> = listOf()
         set(value) {

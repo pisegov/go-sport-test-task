@@ -2,7 +2,6 @@ package com.example.pizza_test_task.data.menu_items.remote
 
 import com.example.pizza_test_task.data.BaseNetworkDataSource
 import com.example.pizza_test_task.data.NetworkResult
-import com.example.pizza_test_task.data.categories.remote.CategoryDataModel
 import com.example.pizza_test_task.data.remote.RetrofitModule
 import com.example.pizza_test_task.di.ApplicationScope
 import kotlinx.serialization.ExperimentalSerializationApi
