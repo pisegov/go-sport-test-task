@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.airbnb.epoxy.EpoxyItemSpacingDecorator
 import com.example.pizza_test_task.App
 import com.example.pizza_test_task.R
-import com.example.pizza_test_task.data.SampleDataStore
 import com.example.pizza_test_task.databinding.FragmentMenuBinding
 import com.example.pizza_test_task.ui.menu.banners.BannersEpoxyController
 import com.example.pizza_test_task.ui.menu.categories.CategoriesEpoxyController
@@ -53,6 +52,7 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
             viewModel.state.collect {
                 categoriesController.items = it.categories
                 menuController.items = it.filteredMenu
+                bannersController.items = it.banners
             }
         }
     }
@@ -62,9 +62,7 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
         binding.categories.setController(categoriesController)
         // binding.categories.addItemDecoration(EpoxyItemSpacingDecorator(8.dpToPx()))
 
-        bannersController = component.bannersEpoxyController.apply {
-            items = SampleDataStore.banners
-        }
+        bannersController = component.bannersEpoxyController
         binding.banners.setController(bannersController)
         binding.banners.addItemDecoration(EpoxyItemSpacingDecorator(16.dpToPx()))
 

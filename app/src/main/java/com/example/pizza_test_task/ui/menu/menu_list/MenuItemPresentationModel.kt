@@ -5,4 +5,5 @@ data class MenuItemPresentationModel(
     val title: String,
     val description: String,
     val buttonText: String,
+    val image: String,
 )

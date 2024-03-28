@@ -7,6 +7,7 @@
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/banner"
         android:layout_width="300dp"
+        android:scaleType="centerCrop"
         android:layout_height="112dp"
         app:shapeAppearanceOverlay="@style/RoundedSquare"
         android:src="@color/grey" />

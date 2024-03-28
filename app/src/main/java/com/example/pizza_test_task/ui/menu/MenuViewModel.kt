@@ -3,6 +3,7 @@ package com.example.pizza_test_task.ui.menu
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.pizza_test_task.domain.MenuInteractor
+import com.example.pizza_test_task.domain.model.Banner
 import com.example.pizza_test_task.ui.menu.categories.CategoryPresentationModel
 import com.example.pizza_test_task.ui.menu.menu_list.MenuItemPresentationModel
 import kotlinx.coroutines.flow.map
@@ -27,9 +28,11 @@ class MenuViewModel @Inject constructor(
                     id = it.id,
                     title = it.title,
                     description = it.description,
-                    buttonText = "от 345"
+                    buttonText = "от 345",
+                    image = it.image,
                 )
-            }
+            },
+            domainState.banners
         )
     }
 
@@ -49,4 +52,5 @@ class MenuViewModel @Inject constructor(
 data class MenuScreenState(
     val categories: List<CategoryPresentationModel>,
     val filteredMenu: List<MenuItemPresentationModel>,
+    val banners: List<Banner>,
 )

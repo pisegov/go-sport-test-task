@@ -59,7 +59,6 @@ dependencies {
 
     implementation(libs.bundles.room)
     ksp(libs.androidx.room.compiler)
-
     implementation(libs.airbnb.epoxy)
     kapt(libs.airbnb.epoxy.processor)
 
@@ -69,6 +68,8 @@ dependencies {
 
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
+
+    implementation(libs.coil)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

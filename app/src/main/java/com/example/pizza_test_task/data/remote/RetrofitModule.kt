@@ -5,7 +5,7 @@ import com.example.pizza_test_task.data.categories.remote.CategoriesApi
 import com.example.pizza_test_task.data.menu_items.remote.MenuItemsApi
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
-import okhttp3.MediaType
+import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.kotlinx.serialization.asConverterFactory
@@ -25,7 +25,7 @@ object RetrofitModule {
     private val retrofit: Retrofit = Retrofit.Builder()
         .client(httpClient)
         .baseUrl(BuildConfig.BASE_URL)
-        .addConverterFactory(json.asConverterFactory(MediaType.get("application/json")))
+        .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
         .build()
 
     val categoriesApi: CategoriesApi = retrofit.create<CategoriesApi>()
